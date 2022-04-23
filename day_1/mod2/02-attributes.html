@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        [title]{color: rgb(69,80,175)}
+        [title="Александр Овечкин"] {
+            font-family: sans-serif;
+        }
+        [title^="Алекс"]{
+            font-size: 2rem;
+        }
+        [title$="як"]{
+            color: #f63;
+        }
+        [title|="verblud"]{
+            border-left: 5px solid #369;
+        }
+        [title~="gladiolus"]{
+            border: 5px solid orange;
+            padding: 20px;
+        }
+        p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .foo{текст1}+p.some{текст2}+p.foo{текст3}+#ops{текст4} -->
+    <p><a href="selectors.html">Просто</a></p>
+    <p title="" data-my="test">test</p>
+    <p title="Александр Овечкин gladiolus">Александр Овечкин</p>
+    <div title="Александр Пушкин">Александр Пушкин</div>
+    <p title="verblud-Александровский маяк">Александровский маяк</p>
+</body>
+</html>

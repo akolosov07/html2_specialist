@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        a:link{color: #369;}
+        a:visited{color: #f63;}
+        a:active{color:green}
+        a:focus, input:focus{
+            border: 5px solid orange;
+            outline: 0;
+        }
+        a:hover {
+            background: #ffc;
+        }
+        p::first-line{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <p>Первый параграф в body</p>
+    <p>Второй параграф в body</p>
+    <p>
+        <div>
+            <p>Первый параграф в div</p>
+            <p>Второй параграф в div</p>
+        </div>
+    </p>
+    <p><a href="#">ссылка</a> в пар</p>
+    <input type="text">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input{
+        border: 1px solid #999;
+        padding: 5px;
+        }
+        input:required{background: orange;}
+        /* input:valid{ background: #cfc;}
+        input:invalid{ background: #fcc;} */
+
+        input[type=checkbox]:required + label::after {
+            content: '*';
+            color: #f00;
+        }
+
+        p + p {
+            background: #735184;
+        }
+        p ~ p {
+            background: #735184;
+        }
+    </style>
+</head>
+<body>
+    <form action=""><input type="text" pattern="\+7\(\d{3}\)\d{7}" placeholder="+7(495)787-33-00" required>
+    <input type="text">
+
+    <input type="checkbox" name="fio" id="foo" required>
+    <label for="foo">имя</label>
+    </form>
+    <!-- p*2>lorem2 -->
+    <p>Lorem, ipsum.</p>
+    <br>
+    <p>Laborum, placeat?</p>
+    
+</body>
+</html>

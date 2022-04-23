@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1 {
+            background: #ccf;
+            border: 5px solid green;
+            display: inline;
+
+        }
+        span {
+            background: #cfc;
+            width: 300px;
+            display: inline-block;
+            line-height: 2.4em;
+        }
+        em {
+            display: none;
+        }
+        span:hover em{
+            /* этот селектор находит элемент em, при условии, что тот внутри span, на который
+            навели */
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background: rgba(0,0,0,.1);
+        }
+        p{
+        display: list-item;
+        list-style-type: armenian;
+        list-style: lower-greek;
+        background: #fcc;
+        }
+    </style>
+</head>
+<body>
+    <h1>H1 - блочный элемент Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quidem?</h1>
+    <span>SPAN - строчный <em>элемент</em></span>
+    <blockquote>
+        <p>Первый параграф</p>
+        <p>Второй параграф</p>
+        <p>Третий параграф</p>
+    </blockquote>
+</body>
+</html>

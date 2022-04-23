@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            background: #ffc;
+        }
+        body {
+            background: #ff9;
+        }
+        .container{
+            background: #fff;
+        }
+        footer{
+            background: #f0f;
+        }
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+        footer {
+            height: 100px;
+        }
+        html, body, .container {height: 100%;}
+        .all {
+            min-height: 100%;
+            margin-bottom: -100px;
+        }
+        .main {
+            padding-bottom: 100px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.all+footer{Подвал} -->
+    <div class="container">
+        <div class="all">
+            <div class="main">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+        <footer>Подвал</footer>
+    </div>
+</body>
+</html>

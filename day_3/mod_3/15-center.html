@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test, #test img{
+            border: 1px solid #000;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        div#test{
+            width: 50%;
+            height: 50%;
+        }
+        #test img{
+            border: 10px solid #fff;
+            box-shadow: 0 0  10px #000;
+            border-radius: 10px;
+        }
+        #foo{
+            position: absolute;
+            top: 340px;
+            left: 45%;
+            border: 1px solid #000;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- #test>img[src=http://placekitten.com/100/100] -->
+    <div id="test"><img src="http://placekitten.com/100/100" alt=""></div>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, 
+        sit alias aperiam saepe suscipit ex nulla sint porro a distinctio! Dolorem expedita unde rem error ipsa laboriosam rerum fugiat reprehenderit!</p> -->
+        <div id="foo">#мыкот</div>
+</body>
+</html>

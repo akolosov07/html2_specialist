@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul span {
+            display: block;
+            padding-left: 40px;
+        }
+        #ul {
+            counter-reset: i 0; 
+        }
+        #ul div::before{
+            counter-increment: i 1;
+            content: counter(i, upper-roman) '. ';
+            counter-reset: j 0;
+        }
+        #ul span::before{
+            counter-increment: j 1;
+            content: counter(i) '.' counter(j) '.';
+        }
+    </style>
+</head>
+<body>
+    <div id="ul">
+        <div>
+            <span>Раздел</span>
+            <span>Раздел</span>
+        </div>
+        <div>Глава
+            <span>Раздел</span>
+            <span>Раздел</span>
+            <span>Раздел</span>
+            <span>Раздел</span>
+        </div>
+    </div>
+</body>
+</html>

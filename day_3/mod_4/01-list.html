@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            background: #cf7;
+            /* padding-left: 0; */
+            list-style-type: decimal-leading-zero;
+            list-style-type: lower-greek;
+            list-style-position: inside;
+        }
+        ul li {
+            background: #ffc;
+        }
+        ol {
+            list-style-type: none;
+            counter-reset: i 1;
+        }
+        ol li::before{
+            counter-increment: i 1;
+            content: counter(i) '. ';
+        }
+        ol ol {
+            counter-reset: j 0;
+        }
+        ol ol li::before{
+            counter-increment: j 1;
+            content: counter(i) '.' counter(j) '.';
+        }
+    </style>
+</head>
+<body>
+    <!-- ol>(li>ol>li*3>{пункт$})+(li*4>{пункт$}) -->
+    <ol>
+        <li>
+            <ol>
+                <li>пункт1</li>
+                <li>пункт2</li>
+                <li>пункт3</li>
+            </ol>
+        </li>
+        <li>пункт1</li>
+        <li>пункт2</li>
+        <li>пункт3</li>
+        <li>пункт4</li>
+    </ol>
+    <!-- ul>li*4>lorem1 -->
+    <ul>
+        <li>Lorem.</li>
+        <li>Maxime?</li>
+        <li>Voluptates.</li>
+        <li>Dicta?</li>
+    </ul>
+</body>
+</html>

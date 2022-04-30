@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            background: #ff9;
+            margin: auto;
+        }
+        .col{
+            border: 1px solid #000;
+            width: 32%;
+            height: 20%;
+        }
+        .main{
+            height: 200px;
+            background: rgb(190, 255, 182);
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+
+            flex-direction: row-reverse;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content: space-between;
+            align-items: flex-end;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.main>.col.col$*3>{col$} -->
+    <div class="container">
+        <div class="main">
+            <div class="col col1">col1</div>
+            <div class="col col2">col2</div>
+            <div class="col col3">col3</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .row{
+            margin: 10px;
+        }
+        .class1{
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            font: 2em sans-serif;
+            padding-left: 40px;
+        }
+        .class1:focus{
+            outline: 0;
+            /* outline: 5px solid pink; */
+            box-shadow: 0 0 0 5px rgba(52, 240, 35)
+        }
+        .row:nth-child(3) {
+            position: relative;
+        }
+        .row:nth-child(3) input{
+            opacity: 0;
+        }
+        .row:nth-child(3)::before{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            position: absolute;
+        }
+        textarea {
+            background: rgb(255, 144, 218);
+        }
+    </style>
+</head>
+<body>
+    <!-- .row*10>input.class$ -->
+    <div class="row"><input type="text" class="class1"></div>
+    <div class="row"><input type="checkbox" class="class2"></div>
+    <div class="row"><input type="color" class="class3"></div>
+    <div class="row"><input type="radio" class="class4"></div>
+    <div class="row"><textarea></textarea></div>
+    <div class="row">
+        <select name="" id="">
+            <option value="">Lorem.</option>
+            <option value="">Esse.</option>
+            <option value="">Sed?</option>
+            <option value="">Cum.</option>
+            <option value="">Non!</option>
+        </select>
+    </div>
+    <div class="row"><input type="text" class="class7"></div>
+    <div class="row"><input type="text" class="class8"></div>
+    <div class="row"><input type="text" class="class9"></div>
+    <div class="row"><input type="text" class="class10"></div>
+</body>
+</html>

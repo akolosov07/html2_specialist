@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 1170px;
+            margin: auto;
+        }
+        .cols {
+            display: flex;
+        }
+        .col {
+            width: 33%;
+            border: 1px solid #000;
+        }
+        header  {
+            background: rgb(99,99,99);
+            height: 670px;
+            color: #fff;
+        }
+        header .container {
+            position: relative;
+        }
+        header a {
+            color: #fff;
+        }
+        .center, h1, h2 {
+            width: 770px;
+            margin: auto;
+            text-align: center;
+        }
+        .menu-top {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+        }
+        .menu-top ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .menu-top a {
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            border-bottom: 4px solid transparent;
+            transition: all .4s .1s linear;
+        }
+        .menu-top a:hover{
+            border-bottom: 4px solid #fff;
+        }
+        header p:first-of-type {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 260px;
+        }
+        header p:last-of-type {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        .container .lead{
+            margin-top: 20px;
+            color: #5f5f5f;
+            line-height: 1.6em;
+        }
+
+        .down {
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgb(190,190,190);
+            margin: auto;
+            display: block;
+            border-radius: 50px;
+            position: relative;
+            top: 150px;
+            transition: all .4s .1s linear;
+        }
+        .down:hover{
+            background: rgb(167,167,167);
+        }
+        .down:hover::after{
+            border-color: rgb(48,48,48);
+        }
+        .down::after{
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-right: 1px solid rgb(190,190,190);
+            border-bottom: 1px solid rgb(190,190,190);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            transform: rotate(45deg);
+        }
+
+        /* начало .about */
+        .about .container{
+            text-align: center;
+            height: 425px;
+        }
+        .about h2 {
+            margin-top: 90px;
+            font-size: 2.5rem;
+            color: #171717;
+        }
+        .sign{
+            margin-top: 30px;
+        }
+        /* конец .about */
+
+        /* начало .stats */
+        .stats {
+            background: #313131 url(./img/pattern_bg.PNG);
+        }
+        .stats .container{
+            height: 260px;
+            color: #fff;
+        }
+        
+        /* конец .stats */
+
+        /* начало blog */
+        .blog {
+            background: #f6f6f6;
+        }
+        .blog .cols {
+            justify-content: space-between;
+        }
+        .blog .col {
+            width: 30%;
+            background: #fff;
+        }
+        .blog .col img {
+            width: 100%;
+        }
+        .blog .col h4,
+        .blog .col p {
+            margin: 10px 20px;
+        }
+        .blog .data {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: .8em;
+            font-family: sans-serif;
+        }
+        .blog .col p {
+            color: rgb(119, 119,119);
+            font-family: sans-serif;
+        }
+
+        .blog .col {
+
+        }
+        .blog .col::before {
+            content: attr(data-title);
+            display: inline-block;
+            position: absolute;
+            top: 190px;
+            left: 10px;
+            padding: 10px 30px;
+            background: rgb(82, 82, 82);
+            text-transform: uppercase;
+            color: #fff;
+        }
+        /* конец blog */
+
+        /* начало footer */
+        footer {
+            background: #313131 url(img/overlay.png);
+        }
+        footer, footer a {
+            color: #fff;
+        }
+        footer .cols {
+            justify-content: space-between;
+        }
+        footer .cols .col {
+            width: 30%;
+            border: 10px solid transparent;
+        }
+        footer p{
+            color: #e9e9e9;
+            line-height: 1.4em;
+        }
+        footer h3{
+            margin-top: 70px;
+
+        }
+        footer p {
+            margin-top: 20px;
+        }
+        footer .icons {
+            margin-top: 30px;
+        }
+        footer .icons i {
+            padding: 4px;
+        }
+        footer .col2 p {
+            position: relative;
+            left: 20px;
+            width: 92%;
+        }
+        footer .col2 i {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+        }
+
+        footer .col3 img {
+            width: 98%;
+        }
+        .copyright{
+            margin-top: 40px;
+            border-top:  1px solid #e1e1e1;
+            text-align: center;
+            padding: 20px 0 30px;
+        }
+        /* конец footer */
+    </style>
+</head>
+<body>
+    <!-- section*9>.container -->
+    <header>
+        <div class="container">
+            <!-- a.logo>img[src=img/logo.npg] -->
+            <a href="" class="logo"><img src="./img/logo.PNG" alt=""></a>
+            <!-- nav.menu-top>ul>li*5>a[href=#]>lorem1 -->
+            <nav class="menu-top">
+                <ul>
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Asperiores!</a></li>
+                    <li><a href="#">Odit.</a></li>
+                    <li><a href="#">Nobis?</a></li>
+                    <li><a href="#">Molestias.</a></li>
+                </ul>
+            </nav>
+
+            <!-- (p.center>lorem3)*2+h1>lorem5 -->
+            <p class="center">Lorem, ipsum dolor.</p>
+            <h1>Lorem ipsum dolor si</h1>
+            <p class="center">Non, minima aut?</p>
+
+            <!-- a[href=#].down  -->
+            <a href="#" class="down"></a>
+        </div>
+    </header>
+    <section class="about">
+        <div class="container">
+            <!-- h2{About Our Agency}+p.center>lorem15+img[src=img/sign.png].sign -->
+            <h2>About Our Agency</h2>
+            <p class="center lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quam,
+                enim, eveniet corporis quisquam molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quam,
+                enim, eveniet corporis quisquam molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quam,
+                
+            </p>
+            <img class="sign" src="img/sign.png" alt="">
+        </div>
+    </section>
+    <section class="stats">
+        <div class="container">
+            <!-- .cols>.col.col$*4p.nums{54$}+p.title>lorem2 -->
+            <div class="cols">
+                <div class="col col1">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <p class="nums">541</p>
+                    <p class="title">Lorem, ipsum.</p>
+                </div>
+                <div class="col col2">
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="nums">541</p>
+                    <p class="title">Lorem, ipsum.</p>
+                </div>
+                <div class="col col3">
+                    <i class="fa-solid fa-heart"></i>
+                    <p class="nums">541</p>
+                    <p class="title">Lorem, ipsum.</p>
+                </div>
+                <div class="col col4">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="nums">541</p>
+                    <p class="title">Lorem, ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects">
+        <div class="container"></div>
+    </section>
+    <section class="reviews">
+        <div class="container"></div>
+    </section>
+    <section class="partners">
+        <div class="container"></div>
+    </section>
+    <section class="blog">
+        <div class="container">
+            <h2>Lorem, ipsum.</h2>
+            <p class="center lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis, eligendi ex at error molestias!</p>
+
+
+            <!-- .cols>.col.col$[data-title=nature$]*3>img+(h3>lorem5)+p.data{29 августа 2020}+p>lorem20  -->
+
+            <div class="cols">
+                <div class="col col1" data-title="nature1">
+                    <img src="" alt="">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p class="data">29 августа 2020</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quis adipisci! Libero non ratione atque quibusdam, sed itaque quam dolorum!</p>
+                </div>
+                <div class="col col2" data-title="nature2">
+                    <img src="" alt="">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p class="data">29 августа 2020</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quis adipisci! Libero non ratione atque quibusdam, sed itaque quam dolorum!</p>
+                </div>
+                <div class="col col3" data-title="nature3">
+                    <img src="" alt="">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p class="data">29 августа 2020</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quis adipisci! Libero non ratione atque quibusdam, sed itaque quam dolorum!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container"></div>
+    </section>
+    <footer>
+        <div class="container">
+            <!-- .cols>.col.col$*3  -->
+            <div class="cols">
+                <div class="col col1">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio doloremque ab architecto possimus? Aliquid, quas? Qui quam optio commodi nam recusandae! Ducimus aspernatur atque dolore enim ea quam eius? Aspernatur!</p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-vk"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col col2">
+                    <h3>Lorem, ipsum.</h3>
+                    <!-- p*3>lorem10  -->
+                    <p><i class="fa-brands fa-twitter"></i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, delectus?</p>
+                    <p><i class="fa-brands fa-twitter"></i>Quibusdam veritatis exercitationem omnis atque minus rerum quo, sint eum.</p>
+                    <p><i class="fa-brands fa-twitter"></i>Rem cum porro exercitationem velit animi repellendus cumque laudantium rerum.</p>
+                </div>
+                <div class="col col3">
+                    <h3>Lorem, ipsum.</h3>
+                    <!-- .cols*2>.col.col$*4>img[src=http://placehold.it/85x85]  -->
+                    <div class="cols">
+                        <div class="col col1"><img src="http://placeholder.it/85x85" alt=""></div>
+                        <div class="col col2"><img src="http://placeholder.it/85x85" alt=""></div>
+                        <div class="col col3"><img src="http://placeholder.it/85x85" alt=""></div>
+                        <div class="col col4"><img src="http://placeholder.it/85x85" alt=""></div>
+                    </div>
+                    <div class="cols">
+                        <div class="col col1"><img src="http://placeholder.it/85x85" alt=""></div>
+                        <div class="col col2"><img src="http://placeholder.it/85x85" alt=""></div>
+                        <div class="col col3"><img src="http://placeholder.it/85x85" alt=""></div>
+                        <div class="col col4"><img src="http://placeholder.it/85x85" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2020 Сделано на курсах
+        </div>
+    </footer>
+</body>
+</html>
